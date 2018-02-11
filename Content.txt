@@ -1,0 +1,21 @@
+Text for image 1 - Sooty
+
+This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is 9 years old but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks.
+
+Text for image 2 - BridgeOverRiverDee
+
+This image was taken from the Old Dee Bridge in Handbridge, Chester. I enjoy experimenting with depth perception, focus and texture in my photography, all of which are shown in this image. Additionally, the city of Chester itself is important to me as I met some wonderful people there during my time at University, and my experiences living there changed my outlook on life considerably.
+
+Text for image 3 -  Books
+
+This is one of my bookcases; as you can see I love books. Reading gives me the opportunity to escape the sometimes mundane realities of life and immerse myself in other realms or time-periods. In particular I enjoy reading historical fiction, especially novels set in the period of King Henry VIII's reign.
+
+
+About me
+
+My name is Lydia Gray and I love tea. If you've ever seen the film Scott Pilgrim vs The World, I'm a bit like Ramona Flowers (though I don't change my hair colour quite as frequently as she does). I always have at least 10 different types of tea in the house. As well as brewing lots of tea, I like to try my hand at baking every so often. I love watching The Great British Bake Off and I have been known to try and replicate some of the challenges (with varying degrees of success). Oh, and I almost forgot, I'm also training to be a developer right now so I spend a lot of time studying about coding and design. Follow me on Facebook to see what I get up to. 
+
+
+Work Experience
+
+In my most recent position as a Junior Developer I have been improving skills using HTML, CSS, Javascript, and C# to develop the Stockport Council website. I have experience working in an Agile enviroment using a combination of Scrum and Kanban methodologies in teams of 7 - 15 people. Prior to this I was a Business Analyst managing stakeholder requirements and creating user stories for the development team. I also completed gap analysis, wrote test cases for user acceptance and system integrations, and provided user training for case management systems. I have accrued several years of experience in general administration, customer service, accounts administration, and tele-sales.

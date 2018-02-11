@@ -1,0 +1,162 @@
+/*Padding and borders are not added to width*/
+* {
+    box-sizing: border-box;
+}
+/*Reset margins and padding for h1,h2,& p tags*/
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+/*Responsive images*/
+img {
+    max-width: 100%;
+    max-height: 80vh; 
+    height: auto;
+}
+body {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    line-height: 1.65;
+}
+h1, h2 {
+    font-family: 'Noto Serif', serif;
+}
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+.container-content, .page-nav, .header-content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.page-header {
+    background-image: url("images/TalacreBeach.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    max-width: 500px;
+    font-size: 1.35rem;
+    color: black;
+    text-shadow: 0  0  10px  rgba(255,255,255,0.7);   
+    text-align: center;
+    padding: 10px;
+}
+
+.header-content a {
+    display: inline-block;
+    /* margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px 20px; */
+    /* background: #83c9f4; */
+    /* color: black;
+    border-radius: 0.2em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem; */
+}
+.header-content a, h1 {
+    vertical-align: top;
+}
+
+.about-me {
+    background-color: #a3d5ff;
+}
+.work-experience {
+    background-color: #83c9f4;
+}
+.image-gallery {
+    background-color: #6F73D2;
+}
+.contact-me {
+    background-color: #7681B3;
+}
+.page-footer {
+    background-color: #4C5372;
+}
+
+.an-image {
+    padding: 10px;
+    text-align: center;
+}
+
+.an-image:nth-child(2n) {
+    background: rgb(160, 160, 160);
+}
+
+@media screen and (min-width: 700px) {
+    
+    .image-gallery {
+      
+      background: #6F73D2;
+    }
+    .image-gallery .content {
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      background: none;
+    }
+    .image-gallery .container-content {
+      max-width: 1000px;
+    }
+    .an-image {
+      flex: 33%; /* assumes three images */
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      background: none;
+      max-width: 333px; /* change this if you want to */
+    }
+    
+  }
+  .page-nav {
+      max-width: none;
+  }
+  .page-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #4C5372;
+    border-right: 1px solid #4C5372;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-nav li {
+    flex: 1 1 50%;
+    display: flex;
+    border-bottom: 1px solid #4C5372;
+    border-left: 1px solid #4C5372;
+}
+
+.page-nav a {
+    padding: 15px 10px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    text-align: center;
+    color: black;
+    background-color: #f2f6fc;
+}
+
+.page-nav a:hover {
+    background: #4C5372;
+    color: #f2f6fc;
+}
+@media screen and (min-width: 760px){
+ 
+  .page-nav ul {  flex-wrap: nowrap; }
+ .page-nav li {
+    flex: 1 1 25%;
+  }
+}

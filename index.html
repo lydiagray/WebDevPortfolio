@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Add your meta description" />
+    <!-- meta tags for Internet Explorer and mobile devices -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A website</title>
+    <!-- add your stylesheet and any other styling code, e.g. google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css" /> </head>
+
+<body>
+    <main>
+        <nav class="page-nav">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#work">Career History</a></li>
+                <li><a href="#images">Image Gallery</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Lydia Gray</h1>
+                <!-- <p>Animal-lover, bibliophile, developer/photographer</p> -->
+                <a href="https://www.facebook.com/lydia.gray2" alt="Lydia Gray's Facebook account"><img src="images/facebook-logo.png"/></a>
+                <a href="https://github.com/lydiagray" alt="Lydia Gray's Github account"><img src="images/github-logo.png"/></a>
+            </div>
+        </header>
+        <section id="about" class="about-me container">
+            <div class="container-content">
+                <h2>About Me</h2>
+                <div class="content">
+                    <!-- add your 150 word maximum About Me content here -->
+                    <p>My name is Lydia Gray and I love tea. If you've ever seen the film Scott Pilgrim vs The World, I'm a bit like Ramona Flowers (though I don't change my hair colour quite as frequently as she does). I always have at least 10 different types of tea in the house.</p> 
+                    <p>As well as brewing lots of tea, I like to try my hand at baking every so often. I love watching The Great British Bake Off and I have been known to try and replicate some of the challenges (with varying degrees of success).</p> 
+                    <p>Oh, and I almost forgot, I'm also training to be a developer right now so I spend a lot of time studying about coding and design. Follow me on Facebook to see what I get up to.</p> 
+                </div>
+            </div>
+        </section>
+        <section id="work" class="work-experience container">
+            <div class="container-content">
+                <h2>Work Experience</h2>
+                <div class="content">
+                    <!-- add your 200 word maximum work experience content here -->
+                    <p>In my most recent position as a Junior Developer I have been improving skills using HTML, CSS, Javascript, and C# to develop the Stockport Council website. I have experience working in an Agile enviroment using a combination of Scrum and Kanban methodologies in teams of 7 - 15 people.</p> 
+                    <ul>
+                        <li>Current - Junior Developer : Stockport Metropolitan Borough Council</li>
+                        <li>Business Analyst : Stockport Metropolitan Borough Council</li>
+                        <li>Business Analyst : Working Links (Wales CRC)</li>
+                        <li>Case Administrator : Wales Community Rehabilitation Company</li>
+                        <li>Bar Staff : Plumbers Arms</li>
+                        <li>Bar Staff : The Chester Hangman</li>
+                        <li>Delivery Driver : RJS Motor Factors</li>
+                        <li>Accounts Administrator : The Clever Baggers</li>
+                        <li>Research and Development Secretary : Control Techniques Plc</li>
+                        <li>Administrator : Wales Holidays</li>
+                        <li>Administrator : Broadcrown Ltd</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="images" class="image-gallery container">
+            <div class="container-content">
+                <h2>Image Gallery</h2>
+                <div class="content">
+                    <div class="an-image">
+                        <!-- add image one here with 150 word maximum caption -->
+                        <img src="images/Sooty-lrg.jpg" width=338 height=450 alt="A black cat with green eyes sat on a beige carpet"/><p>This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is 9 years old but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks. She is my best friend and I would be lost without her.</p>
+                        <div class="image-caption"> </div>
+                    </div>
+                    <div class="an-image">
+                        <!-- add image two here with 150 word maximum caption -->
+                        <img src="images/BridgeOverRiverDee-lrg.jpg" width=660 height=450 alt="Stone columns of a bridge overlooking the river Dee"/><p>This image was taken from the Old Dee Bridge in Handbridge, Chester. I enjoy experimenting with depth perception, focus and texture in my photography, all of which are shown in this image. Additionally, the city of Chester itself is important to me as I met some wonderful people there during my time at University, and my experiences living there changed my outlook on life considerably.</p>
+                        <div class="image-caption"> </div>
+                    </div>
+                    <div class="an-image">
+                        <!-- add image three here with 150 word maximum caption -->
+                        <img src="images/Books-lrg.jpg" width=338 height=450 alt="A tall pine bookcase filled with a variety of books"/><p>This is one of my bookcases; as you can see I love books. Reading gives me the opportunity to escape the sometimes mundane realities of life and immerse myself in other realms or time-periods. In particular I enjoy reading historical fiction, especially novels set in the period of King Henry VIII's reign.</p>
+                        <div class="image-caption"> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-me container">
+            <div class="container-content">
+                <h2>Contact Me</h2>
+                <div class="content">
+                    <form action="https://formspree.io/17106282@stu.mmu.ac.uk" method="post">
+                        <p>
+                            <label for="contact-name">Your Name</label>
+                            <input id="contact-name" type="text" name="contact-name" />
+                        </p>
+                        <p>
+                            <label for="contact-email">Your email address</label>
+                            <input id="contact-email" type="email" name="contact-email" /> </p>
+                        <p>
+                            <label for="contact-phone">Your phone number</label>
+                            <input id="contact-phone" type="tel" name="contact-phone" /> </p>
+                        <p>
+                            <label for="contact-message">Your message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="send my message" /> </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <p> <span class="footer-text">&copy; <a href="http://www.mmu.ac.uk/" title="MMU homepage">MMU 2017</a>
+    </span> <span class="footer-separator">&middot;</span> <span class="footer-text">Lydia Gray</span> <span class="footer-separator">&middot;</span> <span class="footer-text">This is student coursework</span> <span class="footer-separator">&middot;</span> <span class="footer-text">Tutor <a href="mailto:r.eskins@mmu.ac.uk">Richard Eskins</a></span> <span class="footer-separator">&middot;</span> <span class="footer-text">
+     <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a>
+        </span> </p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
