@@ -88,37 +88,33 @@ h2 {
 }
 
 .about-me {
-    background-color: #FCF0C9;
+    background-color: #707070;
 }
 .work-experience {
-    background-color: #F8DDA4;
+    background-color: #919191;
 }
 .image-gallery {
-    background-color: #F9A03F;
+    background-color: #C1C1C1;
 }
 .contact-me {
-    background-color: #D45113;
+    background-color: #D8D8D8;
 }
 .page-footer {
-    background-color: #813405;
+    background-color: #EDEDED;
 }
 
 .an-image {
     padding: 10px;
     text-align: center;
-    background: #FCF0C9;
+    background: #D8D8D8;
 }
 
 .an-image:nth-child(2n) {
-    background: #F8DDA4;
+    background: #919191;
 }
 
 @media screen and (min-width: 700px) {
     
-    .image-gallery {
-      
-      background: #F9A03F;
-    }
     .image-gallery .content {
       display: flex;
       text-align: left;
@@ -134,7 +130,7 @@ h2 {
       padding-right: 20px;
       padding-bottom: 20px;
       padding-left: 20px;
-      background: none;
+      background: #D8D8D8;
       max-width: 333px; /* change this if you want to */
     }    
   }
