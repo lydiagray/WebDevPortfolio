@@ -56,20 +56,49 @@ h2 {
     min-width: 90%;
     font-size: 1.35rem;
     color: #f7f7f7;
-    text-shadow: 0  0  10px  rgba(0, 0, 0, 0.7);   
+    text-shadow: 0  0  10px  rgba(0, 0, 0, 0.9);   
     text-align: center;
-    vertical-align: top;
     padding: 10px;
     position: absolute;
-    top: 10%;
+    vertical-align: top;
+    top: 14%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  
 }
-/* @media screen and (min-width: 600px) {
+
+@media screen and (min-width: 760px) {
     .header-content {
-        min-width: 600px;
-    }        
-} */
+        max-width: 600px;
+        min-width: 90%;
+        font-size: 1.35rem;
+        color: #f7f7f7;
+        text-shadow: 0  0  10px  rgba(0, 0, 0, 0.9);   
+        text-align: center;
+        padding: 10px;
+        position: absolute;
+        vertical-align: top;
+        top: 8%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+}
+
+.header-content .desktop-only {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+    .header-content .desktop-only {
+        display: inline-flex;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .header-content .mobile-only {
+        display: none;
+    }
+}
+
 
 .header-content a {
     display: inline-block;
