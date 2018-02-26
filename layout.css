@@ -46,7 +46,6 @@ h2 {
     display: flex;
     height: 90vh;
     align-items: center;
-    justify-content: flex-start;
     position: relative;
     text-align: center;
 }
@@ -59,18 +58,22 @@ h2 {
     text-shadow: 0  0  10px  rgba(0, 0, 0, 0.9);   
     text-align: center;
     padding: 10px;
-    position: absolute;
-    vertical-align: top;
-    top: 14%;
-    left: 50%;
-    transform: translate(-50%, -50%);  
+    position: relative;
+    vertical-align: middle;
+}
+.img-circle {
+    border-radius: 50%;
+    justify-content: space-around;
+    margin: auto;
+    display: block;
+    border: 1px solid black;
 }
 
-@media screen and (min-width: 760px) {
+/* @media screen and (min-width: 760px) {
     .header-content {
         top: 8%;
     }
-}
+} */
 
 .header-content .desktop-only {
     display: none;
