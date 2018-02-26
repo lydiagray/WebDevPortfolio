@@ -55,11 +55,12 @@ h2 {
     min-width: 90%;
     font-size: 1.35rem;
     color: #f7f7f7;
-    text-shadow: 0  0  10px  rgba(0, 0, 0, 0.9);   
+    text-shadow: 2px  2px  20px  rgba(0, 0, 0, 0.9);   
     text-align: center;
     padding: 10px;
     position: relative;
     vertical-align: middle;
+    font-weight: 600;
 }
 .img-circle {
     border-radius: 50%;
