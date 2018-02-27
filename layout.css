@@ -28,6 +28,9 @@ h2 {
     font-weight: 600;
     letter-spacing: 0.25em;
 }
+span {
+    display: block;
+}
 .container-content, .page-nav, .header-content {
     max-width: 600px;
     margin-left: auto;
@@ -154,14 +157,13 @@ h2 {
     border: 1px solid black;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-
 }
 
 .img-circle:hover  {
     -webkit-filter: grayscale(0%);
     transition: 1s ease-out;
     filter: grayscale(0%);
-    box-shadow: 0 0 15px 5px #12121275;
+    box-shadow: 0 0 15px 5px #121212;
 }
 
 /* .work-experience {
