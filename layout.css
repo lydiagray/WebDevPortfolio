@@ -116,25 +116,29 @@ h2 {
     filter: grayscale(100%);
 }
 
-.header-content .desktop-only {
-    display: none;
-}
-
-@media screen and (min-width: 760px) {
-    .header-content .desktop-only {
-        display: inline-flex;
+@media screen and (max-width: 759px) {
+    .hide-on-mobile {
+        position: absolute; 
+        overflow: hidden; 
+        clip: rect(0 0 0 0); 
+        height: 1px; width: 1px; 
+        margin: -1px; padding: 0; border: 0; 
+    }
+    .extra-padding-top {
+        padding-top: 300px;
     }
 }
 
 @media screen and (min-width: 760px) {
-    .header-content .mobile-only {
-        display: none;
+    .hide-on-desktop {
+        position: absolute; 
+        overflow: hidden; 
+        clip: rect(0 0 0 0); 
+        height: 1px; width: 1px; 
+        margin: -1px; padding: 0; border: 0;
     }
-}
-
-@media screen and (max-width: 280px) {
-    .header-content .mobile-only {
-        display: none;
+    .extra-padding-top {
+        padding-top: 450px;
     }
 }
 
