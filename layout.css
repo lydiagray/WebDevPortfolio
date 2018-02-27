@@ -8,9 +8,6 @@ h1, h2, p {
     padding: 0;
 }
 
-body {
-    margin-top: 0;
-}
 /*Responsive images*/
 img {
     max-width: 100%;
@@ -18,9 +15,11 @@ img {
     height: auto;
 }
 body {
+    margin-top: 0;
     font-family: 'Lora', serif;
     font-size: 20px;
     line-height: 1.65;
+    background: linear-gradient(#EDEDED, #757575);
 }
 h1, h2 {
     font-family: 'Noto Serif', serif;
@@ -145,9 +144,9 @@ h2 {
     }
 }
 
-.about-me {
+/* .about-me {
     background-color: #757575;
-}
+} */
 
 .img-circle {
     border-radius: 50%;
@@ -155,9 +154,17 @@ h2 {
     border: 1px solid black;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+
 }
 
-.work-experience {
+.img-circle:hover  {
+    -webkit-filter: grayscale(0%);
+    transition: 1s ease-out;
+    filter: grayscale(0%);
+    box-shadow: 0 0 15px 5px #12121275;
+}
+
+/* .work-experience {
     background-color: #919191;
 }
 .image-gallery {
@@ -165,6 +172,22 @@ h2 {
 }
 .contact-me {
     background-color: #D8D8D8;
+}
+.page-footer {
+    background-color: #EDEDED;
+} */
+
+.about-me {
+    background: linear-gradient(#757575, #898989);
+}
+.work-experience {
+    background: linear-gradient(#919191, #B7B7B7);
+}
+.image-gallery {
+    background: linear-gradient(#C1C1C1, #CCCCCC);
+}
+.contact-me {
+    background: linear-gradient(#D8D8D8, #E2E2E2);
 }
 .page-footer {
     background-color: #EDEDED;
