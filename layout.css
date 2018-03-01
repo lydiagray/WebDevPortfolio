@@ -28,7 +28,7 @@ h2 {
     font-weight: 600;
     letter-spacing: 0.25em;
 }
-span {
+.hide-on-desktop span {
     display: block;
 }
 .container-content, .page-nav, .header-content {
@@ -130,7 +130,7 @@ span {
         margin: -1px; padding: 0; border: 0; 
     }
     .header-sub-text {
-        margin-top: 510px;
+        margin-top: 30px;
     }
 }
 
@@ -142,9 +142,9 @@ span {
         height: 1px; width: 1px; 
         margin: -1px; padding: 0; border: 0;
     }
-    .header-sub-text {
+    /* .header-sub-text {
         margin-top: 650px;
-    }
+    } */
 }
 
 /* .about-me {
