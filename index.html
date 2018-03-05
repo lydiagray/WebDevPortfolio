@@ -127,6 +127,27 @@
             </div>
         </footer>
     </main>
+
+    <script>
+        var currenttime = new Date();
+        var currenthour = currenttime.getHours();
+
+        var emailmessage = "Now is a good time to contact me.";
+
+        if(currenthour < 6) {
+            emailmessage = "It's not even light outside, don't expect a reply straight away!"
+        }
+        else if (currenthour >= 6 && currenthour <= 12) {
+            emailmessage = "I may not have had coffee yet, contact me if you're brave!";
+        }
+        else if (currenthour <= 20) {
+            emailmessage = "I've gone to bed, I'll reply in the morning.";
+        }
+
+        var getheading = document.querySelector('#contact h2');
+        getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');
+    
+    </script>
 </body>
 
 </html>
