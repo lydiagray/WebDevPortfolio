@@ -17,7 +17,7 @@ img {
 body {
     margin-top: 0;
     font-family: 'Lora', serif;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.65;
     background: linear-gradient(#EDEDED, #757575);
 }
@@ -137,14 +137,7 @@ h2 {
         height: 1px; width: 1px; 
         margin: -1px; padding: 0; border: 0;
     }
-    /* .header-sub-text {
-        margin-top: 650px;
-    } */
 }
-
-/* .about-me {
-    background-color: #757575;
-} */
 
 .img-circle {
     border-radius: 50%;
@@ -160,19 +153,6 @@ h2 {
     filter: grayscale(0%);
     box-shadow: 0 0 15px 5px #121212;
 }
-
-/* .work-experience {
-    background-color: #919191;
-}
-.image-gallery {
-    background-color: #C1C1C1;
-}
-.contact-me {
-    background-color: #D8D8D8;
-}
-.page-footer {
-    background-color: #EDEDED;
-} */
 
 .about-me {
     background: linear-gradient(#757575, #898989);
@@ -222,3 +202,33 @@ h2 {
     }    
   }
 
+.content {
+    margin: 10px 0;
+}
+
+.content .row {
+    width: 100%;
+}
+
+.content label {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+}
+
+.content input, .content textarea {
+    width: 60%;
+    padding: 5px 0;
+}
+
+.content textarea {
+    margin-top: 5px;
+}
+
+.content p input {
+    font-weight: 600;
+}
+
+.container-content h2, .container-content p {
+    text-align: center;
+}

@@ -98,22 +98,24 @@
                 <h2>Contact Me</h2>
                 <div class="content">
                     <form action="https://formspree.io/17106282@stu.mmu.ac.uk" method="post">
-                        <p>
-                            <label for="contact-name">Your Name</label>
+                        <div class="row">
+                            <label for="contact-name">Your name</label>
                             <input id="contact-name" type="text" name="contact-name" />
-                        </p>
-                        <p>
+                        </div>
+                        <div class="row">
                             <label for="contact-email">Your email address</label>
-                            <input id="contact-email" type="email" name="contact-email" /> </p>
-                        <p>
+                            <input id="contact-email" type="email" name="contact-email" />
+                        </div>
+                        <div class="row">
                             <label for="contact-phone">Your phone number</label>
-                            <input id="contact-phone" type="tel" name="contact-phone" /> </p>
-                        <p>
+                            <input id="contact-phone" type="tel" name="contact-phone" />
+                        </div>
+                        <div class="row">
                             <label for="contact-message">Your message</label>
                             <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
-                        </p>
+                        </div>
                         <p>
-                            <input type="submit" value="send my message" /> </p>
+                            <input type="submit" value="Send my message" /> </p>
                     </form>
                 </div>
             </div>
@@ -137,16 +139,43 @@
         if(currenthour < 6) {
             emailmessage = "It's not even light outside, don't expect a reply straight away!"
         }
-        else if (currenthour >= 6 && currenthour <= 12) {
+        else if (currenthour >= 6 && currenthour < 12) {
             emailmessage = "I may not have had coffee yet, contact me if you're brave!";
         }
-        else if (currenthour <= 20) {
-            emailmessage = "I've gone to bed, I'll reply in the morning.";
+        else if (currenthour >= 20) {
+            emailmessage = "I've gone to bed, expect a reply in the morning.";
         }
 
         var getheading = document.querySelector('#contact h2');
-        getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');
-    
+        getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');    
+    </script>
+
+    <script src="scroll.js"></script>
+
+    <script>
+        console.log('Hello from the script on the HTML page');
+
+        // clickHandler function assigned to each nav item
+        var clickHandler = function(event) {
+            console.log('Someone has clicked on a link...');
+        var moveThePageTo = this.getAttribute("href");
+        // this breaks the way links normally work
+        event.preventDefault();
+        // this will only work if they have the external file included
+        console.log('So we will scroll the page to '+moveThePageTo);
+        scrollIt(moveThePageTo, 1300, "easeOutQuint"); 
+        // EXTENSION - add easing, tune the scroll time, create something that brings people back up to the top.
+        };
+
+        // Let's begin talking to the web page
+        // find our nav bar
+        var anchors = document.querySelectorAll("nav a");
+        // loop through the array returned and add an event listener to each item
+        for (var i = 0; i < anchors.length; i++) {
+        var current = anchors[i];
+        // when someone clicks on the link, run the code in the clickHandler function
+        current.addEventListener("click", clickHandler, false);
+        }
     </script>
 </body>
 
