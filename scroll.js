@@ -2,7 +2,7 @@
 
 console.log('Hello from the scroll.js script in the JS folder');
 
-function scrollIt(destination, duration = 200, easing = "linear", callback) {
+function scrollIt(destination, duration, easing, callback) {
     destination = destination.replace("#", "");
     var d = document.getElementById(destination);
     var destination = d.offsetTop;

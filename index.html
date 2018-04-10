@@ -166,7 +166,7 @@
         event.preventDefault();
         // this will only work if they have the external file included
         console.log('So we will scroll the page to '+moveThePageTo);
-        scrollIt(moveThePageTo, 1300, "easeOutQuint"); 
+        scrollIt(moveThePageTo, 1100, "linear"); 
         // EXTENSION - add easing, tune the scroll time, create something that brings people back up to the top.
         };
 
@@ -177,7 +177,7 @@
         for (var i = 0; i < anchors.length; i++) {
         var current = anchors[i];
         // when someone clicks on the link, run the code in the clickHandler function
-        current.addEventListener("click", clickHandler, false);
+        current.addEventListener("click", clickHandler, true);
         }
     </script>
 </body>
