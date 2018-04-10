@@ -79,6 +79,7 @@ h2 {
     color: #f7f7f7;
     box-shadow: inset 0 0 10px #f7f7f7;
 }
+/* For desktop display nav links in a single line */
 @media screen and (min-width: 760px){ 
     .page-nav ul {  
         flex-wrap: nowrap; 
@@ -108,6 +109,7 @@ h2 {
     font-weight: 600;
 }
 
+/* Adds a darker filter to the image to help with colour contrast */
 .header-darkener {
     background: rgba(0, 0, 0, 0.5);
     height: 90vh;
@@ -117,6 +119,7 @@ h2 {
     text-align: center;
 }
 
+/* Hides multi line header subtext on mobile */
 @media screen and (max-width: 759px) {
     .hide-on-mobile {
         position: absolute; 
@@ -130,6 +133,7 @@ h2 {
     }
 }
 
+/* Hides single line header subtext on desktop */
 @media screen and (min-width: 760px) {
     .hide-on-desktop {
         position: absolute; 
@@ -145,6 +149,7 @@ h2 {
     display: block;
 }
 
+/* Adds greyscale filter to image on load */
 .img-circle {
     border-radius: 50%;
     float: right;
@@ -153,6 +158,7 @@ h2 {
     filter: grayscale(100%);
 }
 
+/* Removes greyscale filter on hover/touch - on touch-screen this remains set after user selects photo */
 .img-circle:hover  {
     -webkit-filter: grayscale(0%);
     transition: 1s ease-out;
@@ -160,6 +166,7 @@ h2 {
     box-shadow: 0 0 15px 5px #121212;
 }
 
+/* Add subtle colour transitions to each section background to create a gentle colour change flow */
 .about-me {
     background: linear-gradient(#757575, #898989);
 }
@@ -182,12 +189,13 @@ h2 {
     background: #D8D8D8;
 }
 
+/* Sets a different background colour to every 2nd image */
 .an-image:nth-child(2n) {
     background: #919191;
 }
 
-@media screen and (min-width: 700px) {
-    
+/* For desktop displays 3 images in a line */
+@media screen and (min-width: 700px) {    
     .image-gallery .content {
       display: flex;
       text-align: left;
@@ -204,7 +212,7 @@ h2 {
       padding-bottom: 20px;
       padding-left: 20px;
       background: #D8D8D8;
-      max-width: 333px; /* change this if you want to */
+      max-width: 333px;
     }    
   }
 
