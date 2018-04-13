@@ -1,76 +1,63 @@
 // This code is based on https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 
+"use strict";
+
 console.log('Hello from the scroll.js script in the JS folder');
 
 function scrollIt(destination, duration, easing, callback) {
     destination = destination.replace("#", "");
     var d = document.getElementById(destination);
     var destination = d.offsetTop;
-    const easings = {
-        linear(t) {
+    var easings = {
+        linear: function linear(t) {
             return t;
         },
-        easeInQuad(t) {
+        easeInQuad: function easeInQuad(t) {
             return t * t;
         },
-        easeOutQuad(t) {
+        easeOutQuad: function easeOutQuad(t) {
             return t * (2 - t);
         },
-        easeInOutQuad(t) {
+        easeInOutQuad: function easeInOutQuad(t) {
             return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
         },
-        easeInCubic(t) {
+        easeInCubic: function easeInCubic(t) {
             return t * t * t;
         },
-        easeOutCubic(t) {
+        easeOutCubic: function easeOutCubic(t) {
             return --t * t * t + 1;
         },
-        easeInOutCubic(t) {
+        easeInOutCubic: function easeInOutCubic(t) {
             return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
         },
-        easeInQuart(t) {
+        easeInQuart: function easeInQuart(t) {
             return t * t * t * t;
         },
-        easeOutQuart(t) {
+        easeOutQuart: function easeOutQuart(t) {
             return 1 - --t * t * t * t;
         },
-        easeInOutQuart(t) {
+        easeInOutQuart: function easeInOutQuart(t) {
             return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t;
         },
-        easeInQuint(t) {
+        easeInQuint: function easeInQuint(t) {
             return t * t * t * t * t;
         },
-        easeOutQuint(t) {
+        easeOutQuint: function easeOutQuint(t) {
             return 1 + --t * t * t * t * t;
         },
-        easeInOutQuint(t) {
+        easeInOutQuint: function easeInOutQuint(t) {
             return t < 0.5 ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t;
         }
     };
 
-    const start = window.pageYOffset;
-    const startTime =
-        "now" in window.performance ? performance.now() : new Date().getTime();
+    var start = window.pageYOffset;
+    var startTime = "now" in window.performance ? performance.now() : new Date().getTime();
 
-    const documentHeight = Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight,
-        document.documentElement.clientHeight,
-        document.documentElement.scrollHeight,
-        document.documentElement.offsetHeight
-    );
-    const windowHeight =
-        window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.getElementsByTagName("body")[0].clientHeight;
-    const destinationOffset =
-        typeof destination === "number" ? destination : destination.offsetTop;
+    var documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName("body")[0].clientHeight;
+    var destinationOffset = typeof destination === "number" ? destination : destination.offsetTop;
 
-    const destinationOffsetToScroll = Math.round(
-        documentHeight - destinationOffset < windowHeight ?
-        documentHeight - windowHeight :
-        destinationOffset
-    );
+    var destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
 
     if ("requestAnimationFrame" in window === false) {
         window.scroll(0, destinationOffsetToScroll);
@@ -81,14 +68,10 @@ function scrollIt(destination, duration, easing, callback) {
     }
 
     function scroll() {
-        const now =
-            "now" in window.performance ? performance.now() : new Date().getTime();
-        const time = Math.min(1, (now - startTime) / duration);
-        const timeFunction = easings[easing](time);
-        window.scroll(
-            0,
-            Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
-        );
+        var now = "now" in window.performance ? performance.now() : new Date().getTime();
+        var time = Math.min(1, (now - startTime) / duration);
+        var timeFunction = easings[easing](time);
+        window.scroll(0, Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start));
 
         if (window.pageYOffset === destinationOffsetToScroll) {
             if (callback) {
