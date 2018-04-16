@@ -43,7 +43,7 @@
             <div class="container-content">
                 <h2>About Me</h2>
                 <div class="content">
-                    <img class="img-circle" src="Images/lydia.jpg" height="200" width="150" alt="Photo of Lydia Gray"/>
+                    <img class="img-circle" src="Images/lydia.jpg" height="200" width="150" alt="Photo of Lydia Gray with blue hair stood in front of a red brick wall"/>
                     <!-- add your 150 word maximum About Me content here -->
                     <p>My name is Lydia Gray and I love tea. If you've ever seen the film Scott Pilgrim vs The World, I'm a bit like Ramona Flowers (though I don't change my hair colour quite as frequently as she does). I always have at least 10 different types of tea in the house.</p> 
                     <p>As well as brewing lots of tea, I like to try my hand at baking every so often. I love watching The Great British Bake Off and I have been known to try and replicate some of the challenges (with varying degrees of success).</p>
@@ -175,11 +175,17 @@
         getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');   
         
         //Calculates Sootys current age and replaces the non-javascript element. If JS is disabled there is a default <p> text section
+        //Set this year as current year
         var currentyear = currenttime.getFullYear();
+        //Set variable to existing element contents
         var sootytext = document.getElementById("sooty");
+        //Calculate age by subtracting year of birth
         var sootyage = currentyear - 2008;
+        //Initiate replacement <p> element
         var newsootytext = document.createElement("p");
+        //Set value of replacement <p> element to include calculated age
         newsootytext.innerHTML = "This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is around " + sootyage + " years old but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks. She is my best friend and I would be lost without her.";
+        //Replace old element contents with new element contents
         sootytext.parentNode.replaceChild(newsootytext, sootytext);
     </script>
 

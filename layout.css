@@ -128,7 +128,7 @@ h2 {
 /* **Header section** */
 
 .page-header {
-    background-image: url("Images/Reflection.jpg");
+    background-image: url("Images/ReflectionSmall.jpg");
     background-position: top center;
     background-size: cover;
     display: flex;
