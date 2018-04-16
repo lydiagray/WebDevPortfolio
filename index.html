@@ -16,7 +16,7 @@
 
 <body>
     <main>
-        <nav class="page-nav">
+        <nav class="page-nav" id="page-top">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#work">Career History</a></li>
@@ -48,7 +48,14 @@
                     <p>My name is Lydia Gray and I love tea. If you've ever seen the film Scott Pilgrim vs The World, I'm a bit like Ramona Flowers (though I don't change my hair colour quite as frequently as she does). I always have at least 10 different types of tea in the house.</p> 
                     <p>As well as brewing lots of tea, I like to try my hand at baking every so often. I love watching The Great British Bake Off and I have been known to try and replicate some of the challenges (with varying degrees of success).</p>
                     <p>I'm also a bit of an amateur photographer. I would describe my style as abstract landscape; I like to view things in an unconventional way and find interesting or unusual shapes and perspectives, experimenting with focus and depth-perception.</p> 
-                    <p>Oh, and I almost forgot, I'm also training to be a programmer right now so I spend a lot of time studying about coding and design.</p><p>Find me on Facebook or Github to see what I'm up to. <a href="https://www.facebook.com/lydia.gray2" ><img src="Images/facebook-logo.png" alt="Lydia Gray's Facebook account"/></a> <a href="https://github.com/lydiagray"><img src="Images/github-logo.png" alt="Lydia Gray's Github account"/></a> </p> 
+                    <p>Oh, and I almost forgot, I'm also training to be a programmer right now so I spend a lot of time studying about coding and design.</p><p>Find me on Facebook or Github to see what I'm up to. <a href="https://www.facebook.com/lydia.gray2" ><img src="Images/facebook-logo.png" alt="Lydia Gray's Facebook account"/></a> <a href="https://github.com/lydiagray"><img src="Images/github-logo.png" alt="Lydia Gray's Github account"/></a> </p>
+                    <nav class="page-nav page-top">
+                        <ul>
+                            <li ><a href="#page-top">Back to navigation menu</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- <p class="page-nav page-top"></p>  -->
                 </div>
             </div>
         </section>
@@ -71,6 +78,11 @@
                         <li>Administrator : Wales Holidays</li>
                         <li>Administrator : Broadcrown Ltd</li>
                     </ul>
+                    <nav class="page-nav page-top">
+                        <ul>
+                            <li ><a href="#page-top">Back to navigation menu</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
@@ -80,7 +92,8 @@
                 <div class="content">
                     <div class="an-image">
                         <!-- add image one here with 150 word maximum caption -->
-                        <img src="Images/Cat.jpg" width=338 height=450 alt="A black cat with green eyes sat on a beige carpet"/><p>This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is 9 years old but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks. She is my best friend and I would be lost without her.</p>
+                        <!-- The text for this image will be replaced by dynamic text showing Sootys current age if JS is enabled on the browser -->
+                        <img src="Images/Cat.jpg" width=338 height=450 alt="A black cat with green eyes sat on a beige carpet"/><p id="sooty">This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is an older cat but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks. She is my best friend and I would be lost without her.</p>
                         <div class="image-caption"> </div>
                     </div>
                     <div class="an-image">
@@ -92,8 +105,13 @@
                         <!-- add image three here with 150 word maximum caption -->
                         <img src="Images/Bookcase.jpg" width=338 height=450 alt="A tall pine bookcase filled with a variety of books"/><p>This is one of my bookcases; as you can see I love books. Reading gives me the opportunity to escape the sometimes mundane realities of life and immerse myself in other realms or time-periods. In particular I enjoy reading historical fiction, especially novels set in the period of King Henry VIII's reign.</p>
                         <div class="image-caption"> </div>
-                    </div>
+                    </div>                  
                 </div>
+                <nav class="page-nav page-top">
+                    <ul>
+                        <li ><a href="#page-top">Back to navigation menu</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
         <section id="contact" aria-label="Contact me" class="contact-me container">
@@ -120,6 +138,11 @@
                         <p>
                             <input type="submit" value="Send my message" /> </p>
                     </form>
+                    <nav class="page-nav page-top">
+                        <ul>
+                            <li ><a href="#page-top">Back to navigation menu</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
@@ -134,6 +157,7 @@
     </main>
 
     <script>
+        //Calculates the current hour and displays an appropriate message according to what time of day it is
         var currenttime = new Date();
         var currenthour = currenttime.getHours();
 
@@ -150,7 +174,15 @@
         }
 
         var getheading = document.querySelector('#contact h2');
-        getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');    
+        getheading.insertAdjacentHTML('afterend', '<p>' + emailmessage + '</p>');   
+        
+        //Calculates Sootys current age and replaces the non-javascript element. If JS is disabled there is a default <p> text section
+        var currentyear = currenttime.getFullYear();
+        var sootytext = document.getElementById("sooty");
+        var sootyage = currentyear - 2008;
+        var newsootytext = document.createElement("p");
+        newsootytext.innerHTML = "This is my cat, Sooty. She was adopted from North Clwyd Animal Rescue in May 2016. She is around " + sootyage + " years old but she still loves to play, especially with the mysterious red dot (the laser pen). She is not so fond of visits to the vet or loud noises, though she is unfazed by fireworks. She is my best friend and I would be lost without her.";
+        sootytext.parentNode.replaceChild(newsootytext, sootytext);
     </script>
 
     <script src="scroll.js"></script>
@@ -166,7 +198,7 @@
         event.preventDefault();
         // this will only work if they have the external file included
         console.log('So we will scroll the page to '+moveThePageTo);
-        scrollIt(moveThePageTo, 1100, "linear"); 
+        scrollIt(moveThePageTo, 600, "easeInOutCubic"); 
         // EXTENSION - add easing, tune the scroll time, create something that brings people back up to the top.
         };
 

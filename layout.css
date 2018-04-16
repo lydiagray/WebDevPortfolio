@@ -33,7 +33,7 @@ h2 {
 }
 
 .container-content, .page-nav, .header-content {
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -42,6 +42,11 @@ h2 {
 .page-nav {
     padding: 10px 0px;
     max-width: none;
+}
+
+/* Sets return to nav menu buttons to a smaller max width */
+.page-top {
+    max-width: 350px;
 }
 
 .page-nav ul {
@@ -149,7 +154,7 @@ h2 {
     display: block;
 }
 
-/* Adds greyscale filter to image on load */
+/* Adds greyscale filter to image on load - doesn't work on IE*/
 .img-circle {
     border-radius: 50%;
     float: right;
